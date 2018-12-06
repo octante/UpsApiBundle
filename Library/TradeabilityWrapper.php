@@ -41,7 +41,7 @@ class TradeabilityWrapper
      */
     public function getLandedCosts(LandedCostRequest $request)
     {
-        $this->upsTradeability->getLandedCosts($request);
+        return $this->upsTradeability->getLandedCosts($request);
     }
 
     /**

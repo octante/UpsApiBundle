@@ -37,6 +37,7 @@ class ShippingWrapper
      * @param Shipment                                 $shipment
      * @param ShipmentRequestLabelSpecification|null   $labelSpec
      * @param ShipmentRequestReceiptSpecification|null $receiptSpec
+     * @return \stdClass
      */
     public function confirm(
         $validation,
@@ -44,7 +45,7 @@ class ShippingWrapper
         ShipmentRequestLabelSpecification $labelSpec = null,
         ShipmentRequestReceiptSpecification $receiptSpec = null
     ) {
-        $this->upsShipping->confirm(
+        return $this->upsShipping->confirm(
             $validation,
             $shipment,
             $labelSpec,
@@ -54,18 +55,20 @@ class ShippingWrapper
 
     /**
      * @param $shipmentDigest
+     * @return \stdClass
      */
     public function accept($shipmentDigest)
     {
-        $this->upsShipping->accept($shipmentDigest);
+        return $this->upsShipping->accept($shipmentDigest);
     }
 
     /**
      * @param $shipmentData
+     * @return \stdClass
      */
     public function void($shipmentData)
     {
-        $this->upsShipping->void($shipmentData);
+        return $this->upsShipping->void($shipmentData);
     }
 
     /**
@@ -73,6 +76,7 @@ class ShippingWrapper
      * @param null $labelSpecification
      * @param null $labelDelivery
      * @param null $translate
+     * @return \stdClass
      */
     public function recoverLabel(
         $trackingData,
@@ -80,7 +84,7 @@ class ShippingWrapper
         $labelDelivery = null,
         $translate = null
     ) {
-        $this->upsShipping->recoverLabel(
+        return $this->upsShipping->recoverLabel(
             $trackingData,
             $labelSpecification,
             $labelDelivery,

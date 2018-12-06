@@ -43,7 +43,7 @@ class RateWrapper
      */
     public function shopRates($rateRequest)
     {
-        $this->upsRate->shopRates($rateRequest);
+        return $this->upsRate->shopRates($rateRequest);
     }
 
     /**
