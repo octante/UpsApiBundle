@@ -49,7 +49,7 @@ class AddressValidationWrapper
         $requestOption = AddressValidation::REQUEST_OPTION_ADDRESS_VALIDATION,
         $maxSuggestion = 15
     ) {
-        $this->upsAddressValidation->validate($address, $requestOption, $maxSuggestion);
+        return $this->upsAddressValidation->validate($address, $requestOption, $maxSuggestion);
     }
 
     /**

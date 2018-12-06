@@ -45,7 +45,7 @@ class TrackingWrapper
      */
     public function track($trackingNumber, $requestOption = 'activity')
     {
-        $this->upsTracking->track($trackingNumber, $requestOption);
+        return $this->upsTracking->track($trackingNumber, $requestOption);
     }
 
     /**
@@ -59,7 +59,7 @@ class TrackingWrapper
      */
     public function trackByReference($referenceNumber, $requestOption = 'activity')
     {
-        $this->upsTracking->trackByReference($referenceNumber, $requestOption);
+        return $this->upsTracking->trackByReference($referenceNumber, $requestOption);
     }
 
     /**
